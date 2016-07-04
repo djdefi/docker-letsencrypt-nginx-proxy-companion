@@ -3,7 +3,7 @@
 set -e
 
 # Install python packages needed to build simp_le
-apk --update add python py-requests py-setuptools git gcc py-pip musl-dev libffi-dev python-dev openssl-dev
+apk --update add python py-setuptools git gcc py-pip musl-dev libffi-dev python-dev openssl-dev
 
 # Get Let's Encrypt simp_le client source
 mkdir -p /src

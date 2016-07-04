@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM hypriot/rpi-alpine-scratch 
 
 MAINTAINER Yves Blusseau <90z7oey02@sneakemail.com> (@blusseau)
 
@@ -6,7 +6,10 @@ ENV DEBUG=false              \
 	DOCKER_GEN_VERSION=0.7.0 \
 	DOCKER_HOST=unix:///var/run/docker.sock
 
-RUN apk --update add bash curl ca-certificates procps jq tar && \
+RUN apk update && apk upgrade && apk --update add bash curl ca-certificates procps jq tar python git gcc py-pip musl-dev libffi-dev python-dev openssl-dev && \
+	pip install --upgrade pip && \
+	pip install requests && \
+	pip install --upgrade setuptools && \
 	curl -L -O https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
 	tar -C /usr/local/bin -xvzf docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
 	rm -f docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
