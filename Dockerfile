@@ -10,9 +10,9 @@ RUN apk update && apk upgrade && apk --update add bash curl ca-certificates proc
 	pip install --upgrade pip && \
 	pip install requests && \
 	pip install --upgrade setuptools && \
-	curl -L -O https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
-	tar -C /usr/local/bin -xvzf docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
-	rm -f docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
+	curl -L -O https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-linux-armhf-$DOCKER_GEN_VERSION.tar.gz && \
+	tar -C /usr/local/bin -xvzf docker-gen-linux-armhf-$DOCKER_GEN_VERSION.tar.gz && \
+	rm -f docker-gen-linux-armhf-$DOCKER_GEN_VERSION.tar.gz && \
 	apk del tar && \
 	rm -rf /var/cache/apk/*
 
