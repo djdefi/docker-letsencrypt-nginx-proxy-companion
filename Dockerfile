@@ -1,4 +1,4 @@
-FROM hypriot/rpi-alpine-scratch 
+FROM djdefi/rpi-alpine
 
 MAINTAINER Yves Blusseau <90z7oey02@sneakemail.com> (@blusseau)
 
