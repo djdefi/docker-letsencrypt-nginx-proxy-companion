@@ -1,4 +1,4 @@
-FROM djdefi/rpi-alpine
+FROM djdefi/rpi-python
 
 MAINTAINER Yves Blusseau <90z7oey02@sneakemail.com> (@blusseau)
 
