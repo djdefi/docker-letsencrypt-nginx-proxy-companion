@@ -97,7 +97,7 @@ update_certs() {
         done
 
         echo "Creating/renewal $base_domain certificates... (${hosts_array_expanded[*]})"
-        /usr/bin/simp_le \
+        /usr/local/bin/simp_le \
             -f account_key.json -f key.pem -f fullchain.pem -f cert.pem \
             --tos_sha256 6373439b9f29d67a5cd4d18cbc7f264809342dbf21cb2ba2fc7588df987a6221 \
             $params_d_str \
