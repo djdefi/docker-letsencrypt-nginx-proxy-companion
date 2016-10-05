@@ -26,3 +26,4 @@ ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh" ]
 CMD ["/bin/bash", "/app/start.sh" ]
 
 COPY /app/ /app/
+RUN chmod +x /app/*
