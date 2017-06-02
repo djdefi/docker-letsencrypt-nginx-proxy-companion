@@ -6,7 +6,7 @@ ENV DEBUG=false              \
 	DOCKER_GEN_VERSION=0.7.3 \
 	DOCKER_HOST=unix:///var/run/docker.sock
 
-RUN apk update && apk upgrade && apk --update add bash curl ca-certificates procps jq tar python git gcc py-pip musl-dev libffi-dev python-dev openssl-dev && \
+RUN apk update && apk upgrade && apk --update add bash curl ca-certificates procps jq tar python git gcc py-pip musl-dev libffi-dev python-dev openssl openssl-dev && \
 	pip install --upgrade pip && \
 	pip install requests && \
 	pip install --upgrade setuptools && \
